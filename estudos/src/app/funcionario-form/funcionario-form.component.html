@@ -1,4 +1,12 @@
-<div class="alert alert-success" role="alert" *ngIf="adicionado">
+
+<div class="form-group">
+  <label>Nome</label>
+  <input type="text" class="form-control" name="nome" #nome>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="adicionar(nome.value); nome.value = ''">Adicionar</button>
+
+<!-- <div class="alert alert-success" role="alert" *ngIf="adicionado">
   Funcionário adicionado:
   <strong>{{nome}}</strong>
 </div>
@@ -12,3 +20,4 @@
 
 <button class="btn btn-info" (click)="campo.onfocus()"> colorir </button>
 <button class="btn btn-info" (click)="campo.onblur()"> descolorir </button> 
+ -->

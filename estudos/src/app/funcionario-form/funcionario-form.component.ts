@@ -1,3 +1,4 @@
+import { FuncionarioService } from './../funcionario.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,6 +8,19 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FuncionarioFormComponent implements OnInit {
 
+  constructor(
+    private funcionarioService: FuncionarioService
+  ) {  }
+
+  ngOnInit() {
+  }
+
+  adicionar(nome: string) {
+    this.funcionarioService.adicionar(nome);
+  }
+
+
+  /*
   ultimoId = 0;
   nome = 'Thiago';
   adicionado = false;
@@ -31,5 +45,5 @@ export class FuncionarioFormComponent implements OnInit {
     this.funcionarioAdicionado.emit(funcionario);
   }
 
-
+ */
 }
